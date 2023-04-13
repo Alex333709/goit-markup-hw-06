@@ -583,68 +583,74 @@ img {
 }
 
 /**=============================SubscribeFooter==========================*/
-.footer-text-soc {
-  margin-bottom: 16px;
-}
-.modal-input-footer {
-  width: 264px;
-  height: 40px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  padding-left: 16px;
-  outline: transparent;
-}
-.modal-form-sub {
-  display: block;
-  padding: 0;
-}
-.input-wrap {
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+.subscribe-container {
+  margin-left: 80px;
 }
 
-.footer-label ::placeholder {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1, 5;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  color: var(--back-main-color);
-}
-
-.button-footer {
-  border-radius: 4px;
-  width: 165px;
-  height: 40px;
-  padding-left: 24px;
-  font-family: 'Roboto';
+.subscribe-title {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 5;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-flex-subscribe {
+  display: flex;
+  gap: 24px;
+}
+.subscribe-email {
   display: flex;
   align-items: center;
-  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.5;
   letter-spacing: 0.04em;
-  color: var(--back-main-color);
+  color: #ffffff;
+  padding-left: 16px;
+  width: 264px;
+  height: 40px;
+  outline: none;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.subscribe-email::placeholder {
+  color: #fff;
+}
+.subscribe-button {
+  width: 165px;
+  height: 40px;
+  padding-left: 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 24px;
+  gap: 16px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--color-white-background);
   cursor: pointer;
-  background-color: var(--logo-color);
+  background-color: var(--primery-iris);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-footer:focus,
-.button-footer:hover {
-  background-color: var(--button-focus-color);
+.subscribe-button:focus,
+.subscribe-button:hover {
+  background-color: var(--color-ocean);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
-.icon-subscribe {
-  margin-left: 16px;
-}
 /**----------------------BACKDROP---------------------- */
 
 .backdrop {
@@ -667,7 +673,7 @@ img {
   left: 50%;
 
   width: 408px;
-  height: 576px;
+  /* height: 576px; */
   background-color: var(--color-dairy);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -675,7 +681,6 @@ img {
 
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* padding: 24px; */
 }
 
 .modal-close-btn {
@@ -726,21 +731,11 @@ img {
   margin-bottom: 16px;
 }
 .modal-form {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-left: 24px;
   padding-right: 24px;
 }
-/* .modal-label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--color-light-slate);
-} */
-/* .modal-label span {
-  display: block;
-  margin-bottom: 4px;
-} */
 .modal-input {
   width: 100%;
   height: 40px;
@@ -783,7 +778,7 @@ img {
   margin-bottom: 4px;
 }
 .modal-field {
-  /* display: block; */
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -804,62 +799,70 @@ img {
 /* .modal-input::placeholder {
   color: var(--primery-iris);
 } */
-/* .check_input {
-  display: block;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17em;
-  letter-spacing: 0.04em;
-  color: var(--color-light-slate);
-  text-align: center;
-} */
 
-.submit-button {
+.modal-button {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  align-self: center;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: flex-start;
+  padding: 16px 32px;
   letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
+  color: var(--color-white-background);
+  background-color: var(--primery-iris);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* padding-bottom: 24px; */
+  align-self: center;
+  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .submit-button:hover,
 .submit-button:focus {
   background-color: var(--color-ocean);
 }
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--color-ocean);
+}
 .btn {
-  display: inline-block;
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 169px;
-  /* padding-bottom: 24px; */
 }
 .modal-label {
 }
 
-.check {
-}
-.check_input {
-}
-.modal-button {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+.check-text {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
 }
-.modal-button:hover,
-.modal-button:focus {
-  background-color: var(--color-ocean);
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(89, 91, 125, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-input:checked + .check-text span {
+  background-color: #404bbf;
+  border: none;
+  fill: var(--color-light);
+}
+.check-input:focus + .check-text span {
+  border-color: var(--color-ocean);
 }
 .btn {
 }
@@ -1026,3 +1029,25 @@ img {
 /**-----------------------------------Portfolioheader-----------------------------------*/
 .section-portfolio {
 }
+
+/* .modal-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--color-light-slate);
+  } 
+  /* .modal-label span {
+    display: block;
+    margin-bottom: 4px;
+  } */
+
+/* .check_input {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17em;
+    letter-spacing: 0.04em;
+    color: var(--color-light-slate);
+    text-align: center;
+  } */
